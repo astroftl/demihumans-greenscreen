@@ -1,0 +1,43 @@
+html {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+}
+
+body {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+}
+
+#screen {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    background: coral;
+}
+
+#characters {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 1920px;
+    bottom: -75px;
+}
+
+.character {
+    width: 270px;
+    opacity: 0.3;
+}
+
+.offline {
+    visibility: hidden;
+}
+
+.speaking {
+    opacity: 1;
+    bottom: 0px;
+}
