@@ -17,7 +17,7 @@ html, body {
     position: absolute;
     height: 250px;
     bottom: -80px;
-    opacity: 0.5;
+    opacity: 0.75;
     transition: all 0.1s linear;
 }
 
