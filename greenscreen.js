@@ -26,22 +26,19 @@ socket.addEventListener("message", (event) => {
         console.log("Player disconnected: " + payload["disconnected"])
         let character = document.getElementById(payload["disconnected"])
         let portrait = character.getElementsByClassName("portrait")[0]
-        character.classList.remove("speaking")
-        portrait.classList.remove("shake")
+        portrait.classList.remove("speaking")
         character.classList.add("offline")
     } else if (payload["speaking"]) {
         console.log("Player speaking: " + payload["speaking"])
         let character = document.getElementById(payload["speaking"])
         let portrait = character.getElementsByClassName("portrait")[0]
         character.classList.remove("offline")
-        portrait.classList.add("shake")
-        character.classList.add("speaking")
+        portrait.classList.add("speaking")
     } else if (payload["quiet"]) {
         console.log("Player quiet: " + payload["quiet"])
         let character = document.getElementById(payload["quiet"])
         let portrait = character.getElementsByClassName("portrait")[0]
-        character.classList.remove("speaking")
-        portrait.classList.remove("shake")
+        portrait.classList.remove("speaking")
     } else {
         console.log("Unknown payload!", payload)
     }
