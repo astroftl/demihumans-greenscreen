@@ -41,8 +41,9 @@ html, body {
 div {
     text-align: center;
     font-family: sans-serif;
+    font-weight: bold;
     color: white;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1.5px black;
 }
 
 .character_name {
