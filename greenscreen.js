@@ -20,18 +20,28 @@ socket.addEventListener("message", (event) => {
     let payload = JSON.parse(event.data)
     if (payload["connected"]) {
         console.log("Player connected: " + payload["connected"])
-        document.getElementById(payload["connected"]).classList.remove("offline")
+        let character = document.getElementById(payload["connected"])
+        character.classList.remove("offline")
     } else if (payload["disconnected"]) {
         console.log("Player disconnected: " + payload["disconnected"])
-        document.getElementById(payload["disconnected"]).classList.remove("speaking")
-        document.getElementById(payload["disconnected"]).classList.add("offline")
+        let character = document.getElementById(payload["disconnected"])
+        let portrait = character.getElementsByClassName("portrait")[0]
+        character.classList.remove("speaking")
+        portrait.classList.remove("shake")
+        character.classList.add("offline")
     } else if (payload["speaking"]) {
         console.log("Player speaking: " + payload["speaking"])
-        document.getElementById(payload["speaking"]).classList.remove("offline")
-        document.getElementById(payload["speaking"]).classList.add("speaking")
+        let character = document.getElementById(payload["speaking"])
+        let portrait = character.getElementsByClassName("portrait")[0]
+        character.classList.remove("offline")
+        portrait.classList.add("shake")
+        character.classList.add("speaking")
     } else if (payload["quiet"]) {
         console.log("Player quiet: " + payload["quiet"])
-        document.getElementById(payload["quiet"]).classList.remove("speaking")
+        let character = document.getElementById(payload["quiet"])
+        let portrait = character.getElementsByClassName("portrait")[0]
+        character.classList.remove("speaking")
+        portrait.classList.remove("shake")
     } else {
         console.log("Unknown payload!", payload)
     }
