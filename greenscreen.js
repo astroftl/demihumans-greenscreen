@@ -3,10 +3,10 @@ console.log(queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
-const ws_url = urlParams.get('ws')
-console.log(ws_url);
+const guild_id = urlParams.get('gid')
+console.log(guild_id);
 
-const socket = new WebSocket("ws://" + ws_url);
+const socket = new WebSocket("ws://greenscreen.ftl.sh/" + guild_id);
 
 socket.addEventListener("open", (event) => {
     console.log("Connected to server!")

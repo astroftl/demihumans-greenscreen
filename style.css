@@ -20,17 +20,12 @@ body {
     background: coral;
 }
 
-#characters {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 1920px;
-    bottom: -75px;
-}
-
 .character {
-    width: 270px;
-    opacity: 0.3;
+    position: absolute;
+    width: 250px;
+    bottom: -75px;
+    opacity: 0.2;
+    transition: all 0.1s linear;
 }
 
 .offline {
