@@ -17,27 +17,23 @@ html, body {
     position: absolute;
     bottom: -100px;
     transition: all 0.1s linear;
+    opacity: 0.75;
 }
 
 .portrait {
     position: relative;
     top: -30px;
     height: 250px;
+    transition: all 0.1s linear;
 }
 
 .offline {
     /*visibility: hidden;*/
 }
 
-.portrait {
-    position: relative;
-    opacity: 0.75;
-    bottom: 0px;
-}
-
 .speaking {
     opacity: 1.0;
-    bottom: 0px;
+    bottom: -55px;
 }
 
 .shake {
