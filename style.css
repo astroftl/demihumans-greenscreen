@@ -22,7 +22,7 @@ html, body {
 }
 
 .offline {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 .speaking {
