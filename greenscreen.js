@@ -39,6 +39,7 @@ socket.addEventListener("message", (event) => {
         let character = document.getElementById(payload["quiet"])
         let portrait = character.getElementsByClassName("portrait")[0]
         portrait.classList.remove("speaking")
+    } else if (payload === "heartbeat") {
     } else {
         console.log("Unknown payload!", payload)
     }
